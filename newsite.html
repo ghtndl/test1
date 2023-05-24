@@ -1,0 +1,113 @@
+<html>
+  <head>
+    <title>My Portfolio</title>
+    <style>
+      /* CSS 스타일링 */
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+      }
+
+      header {
+        background-color: #333;
+        padding: 20px;
+        color: #fff;
+        text-align: center;
+      }
+
+      nav {
+        background-color: #f4f4f4;
+        padding: 10px;
+        text-align: center;
+      }
+
+      nav a {
+        text-decoration: none;
+        margin: 0 10px;
+        color: #333;
+      }
+
+      section {
+        padding: 20px;
+      }
+
+      footer {
+        background-color: #333;
+        padding: 20px;
+        color: #fff;
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>이수호의 웹 페이지에 오신걸 환영합니다!</h1>
+    </header>
+
+    <nav>
+      <a href="#" onclick="showHome()">Home</a>
+      <a href="#" onclick="showAbout()">About</a>
+      <a href="#" onclick="showProjects()">Projects</a>
+      <a href="#" onclick="showContact()">Contact</a>
+    </nav>
+
+    <section id="home" style="display: block;">
+      <h2>Home</h2>
+      <p>Welcome to my portfolio website. Feel free to explore!</p>
+    </section>
+
+    <section id="about" style="display: none;">
+      <h2>About</h2>
+      <p>I am a web developer with a passion for creating beautiful and functional websites.</p>
+    </section>
+
+    <section id="projects" style="display: none;">
+      <h2>Projects</h2>
+      <ul>
+        <li>Project 1</li>
+        <li>Project 2</li>
+        <li>Project 3</li>
+      </ul>
+    </section>
+
+    <section id="contact" style="display: none;">
+      <h2>Contact</h2>
+      <p>You can reach me at 2019162024@eulji.ac.kr</p>
+    </section>
+
+    <footer>
+      &copy; 2023 My Portfolio. All rights reserved.
+    </footer>
+
+    <script>
+      // 자바스크립트 함수 정의
+      function showHome() {
+        hideAllSections();
+        document.getElementById("home").style.display = "block";
+      }
+
+      function showAbout() {
+        hideAllSections();
+        document.getElementById("about").style.display = "block";
+      }
+
+      function showProjects() {
+        hideAllSections();
+        document.getElementById("projects").style.display = "block";
+      }
+
+      function showContact() {
+        hideAllSections();
+        document.getElementById("contact").style.display = "block";
+      }
+
+      function hideAllSections() {
+        var sections = document.getElementsByTagName("section");
+        for (var i = 0; i < sections.length; i++) {
+          sections[i].style.display = "none";
+        }
+      }
+    </script>
+  </body>
+</html>
